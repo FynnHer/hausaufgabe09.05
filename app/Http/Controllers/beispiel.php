@@ -18,6 +18,8 @@ class beispiel extends Controller
         $user->email=$request['email'];
         $user->password=$request['password'];
 
+        $user->save();
+
         return view('ausgabe', [
             'lname' => $request['lname'],
             'fname' => $request['fname']

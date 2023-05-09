@@ -17,4 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/registration', function () {
+    return view('registration');
+});
+
 Route::post('/angemeldet', [App\Http\Controllers\beispiel::class, 'verarbeiten']);
