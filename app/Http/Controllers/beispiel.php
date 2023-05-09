@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\User;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class beispiel extends Controller
 {
     //
-    public function verarbeiten(Request $request){
+    public function register(Request $request){
 
         $user = new User();
 
@@ -22,9 +23,26 @@ class beispiel extends Controller
 
         return view('ausgabe', [
             'lname' => $request['lname'],
-            'fname' => $request['fname']
+            'fname' => $request['fname'],
+            'method' => 'regestriert'
+        ]);
+    }
+
+    public function angemeldet(Request $request){
+
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required',
         ]);
 
+        $credential = $request->only('email', 'password');
 
+        if (Auth::attempt($credential)) {
+            return view('ausgabe', [
+                'lname' => $request['lname'],
+                'fname' => $request['fname'],
+                'method' => 'angemeldet'
+            ]);
+        };
     }
 }

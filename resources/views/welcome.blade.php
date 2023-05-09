@@ -9,6 +9,7 @@
         <button type="submit">Regestrieren!</button><br>
 
     </form>
+    <br>
     <form action="login">
         <button type="submit">Anmelden!</button>
     </form>

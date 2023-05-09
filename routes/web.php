@@ -21,4 +21,6 @@ Route::get('/registration', function () {
     return view('registration');
 });
 
-Route::post('/angemeldet', [App\Http\Controllers\beispiel::class, 'verarbeiten']);
+Route::post('/registered', [App\Http\Controllers\beispiel::class, 'register']);
+
+Route::post('/angemeldet', [\App\Http\Controllers\beispiel::class, 'angemeldet']);
