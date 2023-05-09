@@ -11,7 +11,7 @@
 
 <body class="antialiased">
 
-    Hallo {{ $lname }} {{ $fname }}.
+    Hallo. Bist du {{ $lname }} {{ $fname }}.
 
 </body>
 
