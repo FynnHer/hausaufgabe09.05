@@ -45,4 +45,12 @@ class beispiel extends Controller
             ]);
         };
     }
+
+    public function abgegeben(Request $reques){
+
+        return view('abgegeben', [
+            dd()
+        ]);
+
+    }
 }
