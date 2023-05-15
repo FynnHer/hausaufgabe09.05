@@ -12,10 +12,12 @@
 <body class="antialiased">
     <form action="/abgegeben" method="post">
         @csrf
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
-        <label for="password">Passwort:</label><br>
-        <input type="password" id="password" name="password"><br>
+        <label for="date">Datum</label><br>
+        <input type="datetime-local" id="date" name="date"><br>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="text">Text:</label>
+        <input type="textarea" id="text" name="text">
         <input type="submit" value="Abschicken">
 
     </form>

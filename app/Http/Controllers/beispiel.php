@@ -46,10 +46,9 @@ class beispiel extends Controller
         };
     }
 
-    public function abgegeben(Request $reques){
+    public function abgegeben(Request $request){
 
         return view('abgegeben', [
-            dd()
         ]);
 
     }
