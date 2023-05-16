@@ -17,7 +17,7 @@
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name"><br>
         <label for="text">Text:</label>
-        <input type="textarea" id="text" name="text">
+        <textarea rows="rows" cols="cols" name="post"> Dein Post hier... </textarea>
         <input type="submit" value="Abschicken">
 
     </form>
